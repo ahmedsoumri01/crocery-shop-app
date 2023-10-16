@@ -8,11 +8,12 @@ class IntroPage extends StatelessWidget {
       children: [
         //logo
         Padding(
-            padding:
-                const EdgeInsets.only(left: 80, top: 16, right: 80, bottom: 80),
+            padding: const EdgeInsets.only(
+                left: 80, top: 120, right: 80, bottom: 80),
             child: Image.asset('lib/images/avocado.png')),
         Padding(
           padding: const EdgeInsets.all(24),
+          //we deliver grocesoire at your doorstep
           child: Text(
             "we deliver grocesoire at your doorstep",
             textAlign: TextAlign.center,
@@ -23,11 +24,23 @@ class IntroPage extends StatelessWidget {
           ),
         ),
 
-        //we deliver grocesoire at your doorstep
-
         //fresh item
-
+        Text(
+          'Fresh Items Every day',
+        ),
         //get started button
+        const Spacer(),
+        Container(
+          decoration: BoxDecoration(
+              color: Colors.deepPurple,
+              borderRadius: BorderRadius.circular(10)),
+          padding: const EdgeInsets.all(16),
+          child: Text(
+            "get started",
+            style: TextStyle(color: Colors.white),
+          ),
+        ),
+        const Spacer(),
       ],
     ));
   }
