@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_shop_app/pages/Home_page.dart';
 
 class IntroPage extends StatelessWidget {
   @override
@@ -30,14 +31,20 @@ class IntroPage extends StatelessWidget {
         ),
         //get started button
         const Spacer(),
-        Container(
-          decoration: BoxDecoration(
-              color: Colors.deepPurple,
-              borderRadius: BorderRadius.circular(10)),
-          padding: const EdgeInsets.all(16),
-          child: Text(
-            "get started",
-            style: TextStyle(color: Colors.white),
+        GestureDetector(
+          onTap: () {
+            Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: (context) => const HomePage()));
+          },
+          child: Container(
+            decoration: BoxDecoration(
+                color: Colors.deepPurple,
+                borderRadius: BorderRadius.circular(10)),
+            padding: const EdgeInsets.all(16),
+            child: Text(
+              "get started",
+              style: TextStyle(color: Colors.white),
+            ),
           ),
         ),
         const Spacer(),
